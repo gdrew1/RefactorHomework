@@ -1,0 +1,53 @@
+package q1.extract_method.refactored;
+
+import java.util.List;
+
+public class A {
+   Node m1(List<Node> nodes, String p) {
+      // TODO: Your answer
+      // other implementation
+      return null;
+   }
+
+   Edge m2(List<Edge> edgeList, String p) {
+      // TODO: Your answer
+      // other implementation
+      return null;
+   }
+
+   
+   void checkAll(List<Graph> list, String p) {
+	   for(Graph e: list) {
+		   if(e.name.contains(p))
+			   System.out.println(e);
+	   }
+   }
+   
+   
+   
+   
+}
+
+class Node extends Graph{
+   String name;
+
+   public boolean contains(String p) {
+      return name.contains(p);
+   }
+}
+
+class Edge extends Graph{
+   String name;
+
+   public boolean contains(String p) {
+       return name.contains(p);
+   }
+}
+
+class Graph {
+	String name;
+	
+	public boolean contains(String p) {
+		return name.contains(p);
+	}
+}

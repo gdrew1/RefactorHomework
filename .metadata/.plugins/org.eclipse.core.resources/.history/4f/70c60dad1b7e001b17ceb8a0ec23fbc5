@@ -1,0 +1,47 @@
+package q1.extract_method.refactored;
+
+import java.util.List;
+
+public class A {
+   Node m1(List<Node> nodes, String p) {
+      checkAll(nodes, p);
+      // other implementation
+      return null;
+   }
+
+   Edge m2(List<Edge> edgeList, String p) {
+      
+      // other implementation
+      return null;
+   }
+
+   
+   private <E> void checkAll(List<E> list, String p) {
+	   for(E e: list) {
+		   if(e instanceof Node && ((Node) e).contains(p))
+			   System.out.println(e);
+		   else if(e instanceof Edge && ((Edge) e).contains(p))
+			   System.out.println(e);
+	   }
+   }
+   
+   
+   
+   
+}
+
+class Node{
+   String name;
+
+   public boolean contains(String p) {
+      return name.contains(p);
+   }
+}
+
+class Edge{
+   String name;
+
+   public boolean contains(String p) {
+       return name.contains(p);
+   }
+}
